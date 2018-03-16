@@ -9,33 +9,6 @@ const cardNumbers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K"
 
 
 
-const houseCard1 = () => {
-  console.log("runningHC1");
-  let card1 = cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
-  let suite1 = suites[Math.floor(Math.random() * suites.length)];
-  let housecard1 = card1 + " " + suite1;
-  return housecard1;
-}
-
-const houseCard2 = () => {
-  console.log("runningHC2");
-  let card2 = cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
-  let suite2 = suites[Math.floor(Math.random() * suites.length)];
-  let housecard2 = card2 + " " + suite2;
-  return housecard2;
-}
-const dealCompHand = () => {
-  let hc1 = houseCard1();
-  let hc2 = houseCard2();
-  if (hc1 === hc2){
-    hc2 = houseCard2();
-  }
-  document.querySelector("#houseCard1").textContent = hc1;
-  document.querySelector("#houseCard2").textContent = hc2;
-  document.querySelector("#houseButton").disabled = true;
-  document.querySelector("#playerButton").disabled = false;
-}
-
 const playerCard1 = () => {
   console.log("runningPC1");
   let card1 = cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
@@ -51,8 +24,7 @@ const playerCard2 = () => {
   let playercard2 = card2 + " " + suite2;
   return playercard2;
 }
-
-const dealPlayerHand = () =>{
+const dealPlayerHand = () => {
   let pc1 = playerCard1();
   let pc2 = playerCard2();
   if (pc1 === pc2){
@@ -61,8 +33,36 @@ const dealPlayerHand = () =>{
   document.querySelector("#playerCard1").textContent = pc1;
   document.querySelector("#playerCard2").textContent = pc2;
   document.querySelector("#playerButton").disabled = true;
+  document.querySelector("#houseButton").disabled = false;
+}
+
+const houseCard1 = () => {
+  console.log("runningHC1");
+  let card1 = cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
+  let suite1 = suites[Math.floor(Math.random() * suites.length)];
+  let housecard1 = card1 + " " + suite1;
+  return housecard1;
+}
+
+const houseCard2 = () => {
+  console.log("runningHC2");
+  let card2 = cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
+  let suite2 = suites[Math.floor(Math.random() * suites.length)];
+  let housecard2 = card2 + " " + suite2;
+  return housecard2;
+}
+
+const dealHouseHand = () =>{
+  let hc1 = houseCard1();
+  let hc2 = houseCard2();
+  if (hc1 === hc2){
+    hc2 = houseCard2();
+  }
+  document.querySelector("#houseCard1").textContent = hc1;
+  document.querySelector("#houseCard2").textContent = hc2;
+  document.querySelector("#houseButton").disabled = true;
 }
 
 const determineWinner = () =>{
-  
+
 }
