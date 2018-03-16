@@ -11,31 +11,36 @@
     <div class= "flex">
     <header> <h1> Black-Jack </h1> </header>
 
+    <section >
+
+        <h4> Player </h4>
+  
+        <button id="playerButton"  onclick="dealPlayerHand()"> Deal Player </button>
+  
+        <h2 id="playerCard1"> 1st Card </h2>
+        <h2 id="playerCard2"> 2nd Card </h2>
+  
+        <h2 id="HitCards">  </h2>
+  
+        <button id= "hitButton" disabled="true" onclick="addPlayerCard()" > Hit </button>
+  
+      </section>
+
 
     <section >
 
         <h4> House </h4>
 
-        <button id="houseButton" disabled="true" onclick="dealCompHand()"> Reveal House </button>
+        <button id="houseButton" disabled="true" onclick="dealHouseHand()"> Reveal House </button>
   
         <h2 id="houseCard1"> 1st Card </h2> 
         <h2 id="houseCard2"> 2nd Card </h2>
   
       </section>
 
-    <section >
+    
 
-      <h4> Player </h4>
-
-      <button id="playerButton"  onclick="dealPlayerHand()"> Deal Player </button>
-
-      <h2 id="playerCard1"> 1st Card </h2>
-      <h2 id="playerCard2"> 2nd Card </h2>
-
-
-      <button onclick="reset()"> Play again? </button>
-
-    </section>
+    <button onclick="reset()"> Play again? </button>
 
   </div>
 

@@ -34,7 +34,27 @@ const dealPlayerHand = () => {
   document.querySelector("#playerCard2").textContent = pc2;
   document.querySelector("#playerButton").disabled = true;
   document.querySelector("#houseButton").disabled = false;
+  document.querySelector("#hitButton").disabled = false;
 }
+
+const hitCard = () => {
+  console.log("runningHit");
+  let card3 = cardNumbers[Math.floor(Math.random() * cardNumbers.length)];
+  let suite3 = suites[Math.floor(Math.random() * suites.length)];
+  let playerCard3 = card3 + " " + suite3;
+  return playerCard3;
+  }
+  
+  const addPlayerCard = () => {
+    let hitPlayer = hitCard(); 
+    let pc1 = playerCard1();
+    let pc2 = playerCard2();
+    if (hitPlayer === pc1 || hitPlayer === pc2){
+      hitPlayer = playerCard3();
+    }
+    document.querySelector("#HitCards").textContent = hitPlayer;
+    document.querySelector("#hitButton").disabled = true;
+  }
 
 const houseCard1 = () => {
   console.log("runningHC1");
@@ -62,6 +82,9 @@ const dealHouseHand = () =>{
   document.querySelector("#houseCard2").textContent = hc2;
   document.querySelector("#houseButton").disabled = true;
 }
+
+
+
 
 const determineWinner = () =>{
 
