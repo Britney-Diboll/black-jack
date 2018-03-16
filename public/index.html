@@ -4,10 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Black Jack</title>
-    <link rel="stylesheet" href="/screen.css">
+    <link rel="stylesheet" href="./screen.css">
   </head>
+
   <body>
-    <h1>Hello, World!</h1>
-    <script src="/main.js" charset="utf-8"></script>
+    <div class= "flex">
+    <header> <h1> Black-Jack </h1> </header>
+
+
+    <section >
+
+        <h4> House </h4>
+
+        <button id="houseButton" onclick="dealCompHand()"> Deal House </button>
+  
+        <h2 id="houseCard1"> 1st Card </h2> 
+        <h2 id="houseCard2"> 2nd Card </h2>
+  
+      </section>
+
+    <section >
+
+      <h4> Player </h4>
+
+      <button id="playerButton" disabled="true" onclick="dealPlayerHand()"> Deal Player </button>
+
+      <h2 id="playerCard1"> 1st Card </h2>
+      <h2 id="playerCard2"> 2nd Card </h2>
+
+      <button onclick="reset()"> Play again? </button>
+
+    </section>
+
+  </div>
+
+
+
+    <script src="./main.js" charset="utf-8"></script>
   </body>
 </html>
