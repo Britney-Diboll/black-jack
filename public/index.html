@@ -8,43 +8,50 @@
   </head>
 
   <body>
-    <div class= "flex">
-    <header> <h1> Black-Jack </h1> </header>
+  
+    <header class="header"> <h1> Black-Jack </h1> </header>
 
-    <section >
+    <div class= "flex">
+    <section class= "player">
 
         <h4> Player </h4>
+
   
-        <button id="playerButton"  onclick="dealPlayerHand()"> Deal Player </button>
-  
-        <h2 id="playerCard1"> 1st Card </h2>
-        <h2 id="playerCard2"> 2nd Card </h2>
-  
-        <h2 id="HitCards">  </h2>
-  
-        <button id= "hitButton" disabled="true" onclick="addPlayerCard()" > Hit </button>
-  
+        <h2 id="playerCard1">1st Card</h2>
+        <h2 id="playerCard2">2nd Card</h2>
+        <h2 id="playerCard3"></h2>
+        <h2 id="playerCard4"></h2>
+        <h2 id="playerCard5"></h2>
+
+        <button id="playerButton"  onclick="dealPlayerHand()"> Deal Player </button> 
+        <br>
+        <br>
+       
       </section>
 
 
-    <section >
+    <section class= "house">
 
         <h4> House </h4>
 
-        <button id="houseButton" disabled="true" onclick="dealHouseHand()"> Reveal House </button>
-  
-        <h2 id="houseCard1"> 1st Card </h2> 
-        <h2 id="houseCard2"> 2nd Card </h2>
-  
-      </section>
 
-    
+  
+        <h2 id="houseCard1">1st Card</h2> 
+        <h2 id="houseCard2">2nd Card</h2>
+        <h2 id="houseCard3"></h2>
+        <h2 id="houseCard4"></h2>
+        <h2 id="houseCard5"></h2>
 
-    <button onclick="reset()"> Play again? </button>
+        <button onclick="reset()"> Play again? </button>
+    </section>
 
   </div>
 
-
+  <span class="header">
+      <button id= "hitButton" disabled="true" onclick="addPlayerCard()" > Hit </button>
+        <br>
+      <button id="houseButton" disabled="true" onclick="dealHouseHand()"> Stay </button>
+    </span>
 
     <script src="./main.js" charset="utf-8"></script>
   </body>

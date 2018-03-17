@@ -8,8 +8,32 @@ body {
   font: 16px / 1 sans-serif;
 }
 
-.flex{
+.header{
+display: flex;
+justify-content: center;
+align-content: center;
+align-items: center;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.player {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding: 40px;
+  min-width: 30%;
+  }
+
+.house {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px;
+min-width: 30%;
 }
+
